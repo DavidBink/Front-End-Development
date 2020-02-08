@@ -26,39 +26,6 @@ p {
   overflow: scroll;
   cursor: row-resize;
 }
-/*h3#chicken {
-	position: absolute;
-	top: -3px;
-	right: 20px;
-	border: 1px solid black;
-	margin-bottom: 20px;
-	background-color: #FFC0CB;
-	padding-right: 10px;
-	padding-left: 10px;
-	text-align: center;
-}
-
-h3#beef {
-	position: absolute;
-	top: -3px;
-	right: 20px;
-	border: 1px solid black;
-	background-color: #A52A2A;
-	padding-right: 10px;
-	padding-left: 10px;
-	text-align: center;
-}
-
-h3#sushi {
-	position: absolute;
-	top: -3px;
-	right: 20px;
-	border: 1px solid black;
-	background-color: #FFFF33;
-	padding-right: 10px;
-	padding-left: 10px;
-	text-align: center;
-}*/
 
 /* Simple Responsive Framework. */
 .row {
