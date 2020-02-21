@@ -87,6 +87,4 @@ function greetings(names_arr) {
     }
     return value;
   }
-
-console.log(petCounts); 
 })(window);
