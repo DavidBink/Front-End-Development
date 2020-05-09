@@ -1,0 +1,53 @@
+<div class="container">
+  <h1>My Info!</h1>
+  <div ng-if="!myInfoCtrl.completed">
+    <h3>Not Signed Up Yet :(</h3>
+    <a ui-sref="public.signup">
+      Sign Up Now!
+      </a>
+  </div>
+  <div ng-if="myInfoCtrl.completed">
+    <fieldset>
+        <form name='regForm' novalidate>
+            <h3>First Name:</h3>
+
+            {{ myInfoCtrl.user.firstName }}
+
+            <br>
+
+            <h3>Last Name:</h3>
+
+            {{ myInfoCtrl.user.lastName }}
+
+            <br>
+
+            <h3>Email:</h3>
+
+            {{ myInfoCtrl.user.email }}
+
+            <br>
+
+            <h3>Phone Number:</h3>
+
+              {{ myInfoCtrl.user.phone }}
+
+            <br>
+
+            <h3>Favorite Dish Menu Number:</h3>
+
+            {{ myInfoCtrl.user.favoriteItem.name }}
+
+            <br>
+
+            {{ myInfoCtrl.user.favoriteItem.description }}
+            <br>
+
+
+            <img class="img-responsive" width="250" height="150" ng-src="{{myInfoCtrl.basePath}}/images/{{myInfoCtrl.user.favoriteItem.short_name}}.jpg" alt="{{$ctrl.user.favoriteItem.name}}">
+
+            <br>
+
+        </form>
+    </fieldset>
+  </div>
+</div>

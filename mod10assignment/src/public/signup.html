@@ -1,0 +1,65 @@
+<div class="container">
+  <h1>Sign Up!</h1>
+  <fieldset>
+        <!-- <legend>Registration</legend> -->
+        <form name='regForm' novalidate>
+          <h3>First Name:</h3>
+          <input type="text" name="firstName" placeholder="First Name"
+            ng-model="signUpCtrl.firstName"
+            required>
+            <!-- minlength="4"
+            ng-maxlength="10" -->
+            <!-- <span
+              ng-if="(regForm.username.$error.minlength || regForm.username.$error.required) && regForm.username.$touched">
+              Username must be at least 4 characters long
+            </span>
+            <span ng-if="regForm.username.$error.maxlength && regForm.username.$touched">
+              Username must not be longer than 10 characters
+            </span> -->
+            <br>
+          <h3>Last Name:</h3>
+          <input type="text" name="lastName" placeholder="Last Name"
+          ng-model="signUpCtrl.lastName"
+          required
+          >
+          <br>
+
+          <h3>Email:</h3>
+          <input type="email" name="email" placeholder="handle@domain"
+            ng-model="signUpCtrl.email"
+            required>
+            <span ng-if="regForm.email.$invalid && regForm.email.$touched">
+              Must be a valid email address: handle@domain format
+            </span>
+
+            <br>
+
+          <h3>Phone Number:</h3>
+          <input type="text" name="phone" placeholder="###-###-####"
+            ng-model="signUpCtrl.phone"
+            pattern="(\d{3})-(\d{3})-(\d{4})">
+            <span ng-if="regForm.phone.$invalid && regForm.phone.$touched">
+              Phone must be in the format ###-###-####.
+            </span>
+            <br>
+          <h3>Favorite Dish Menu Number:</h3>
+          <input type="text" name="shortName" placeholder="Short Name"
+          ng-model="signUpCtrl.shortName"
+          ng-keyup="signUpCtrl.validateItem(signUpCtrl.shortName)">
+          <span style="margin-top: 10px;" ng-if="!signUpCtrl.valid">
+            No such menu number exists.
+          </span>
+          <br>
+          <h3></h3>
+          <button
+            ng-disabled="regForm.$invalid"
+            name="submit"
+            ng-click="signUpCtrl.submit()">Submit</button>
+
+            <div style="margin-top: 10px;" ng-if="signUpCtrl.completed && signUpCtrl.valid">
+              Your information has been saved.
+            </div>
+
+        </form>
+      </fieldset>
+</div>
